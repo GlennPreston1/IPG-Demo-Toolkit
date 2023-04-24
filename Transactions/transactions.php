@@ -79,8 +79,8 @@
 
 				$.ajax({
 					type: 'POST',
-					url: 'deletePayloadFile.php',
-					data: { 'file' : 'logs/' + payloadFile }
+					url: 'utils/deletePayloadFile.php',
+					data: { 'file' : '../logs/' + payloadFile }
 				});
 			}
 		}
