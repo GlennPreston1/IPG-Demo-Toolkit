@@ -121,7 +121,7 @@
 		</script>
 		
 		<!-- JS functions -->
-		<script src="../endpointConfig.js" type="text/javascript"></script>
+		<script src="../config/endpointConfig.js" type="text/javascript"></script>
 		<script src="../scripts/utils.js" type="text/javascript"></script>
 		<script src="../scripts/formSubmissionController.js" type="text/javascript"></script>
 		

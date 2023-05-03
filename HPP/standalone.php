@@ -12,9 +12,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-		<!-- JS functions -->
-		<script src="../endpointConfig.js" type="text/javascript"></script>
-
 		<!-- Components -->
 		<script src="../components/navbar.js" type="text/javascript" defer></script>
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
@@ -146,7 +143,7 @@
 		</script>
 		
 		<!-- JS functions -->
-		<script src="../endpointConfig.js" type="text/javascript"></script>
+		<script src="../config/endpointConfig.js" type="text/javascript"></script>
 		<script src="../scripts/utils.js" type="text/javascript"></script>
 		<script src="../scripts/formSubmissionController.js" type="text/javascript"></script>
 	</body>
