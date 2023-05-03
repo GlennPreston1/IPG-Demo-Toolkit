@@ -16,7 +16,7 @@
 	<body>
 		<navbar-component></navbar-component>
 
-		<div class="container my-5">
+		<div class="container my-4">
 			<div class="text text-center mb-4"><h2><strong>Transaction Response</strong></h2></div>
 
 			<table class="table table-sm table-striped table-bordered">
