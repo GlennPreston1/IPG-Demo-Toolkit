@@ -4,9 +4,25 @@ class NavBar extends HTMLElement {
 	}
 
 	connectedCallback() {
+		var user = getCookie("user");
+		var userElement = "";
+		if (user != null && user != "") {
+			userElement = `
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown" id="User">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">`+user+`</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../index.php" onclick="return logOut();">Log out</a>
+						</div>
+					</li>
+				</ul>
+			`;
+		}
+		
 		this.innerHTML = `
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-				<a class="navbar-brand" href="../HPP/hostedpaypage.php">IPG Demo Tool</a>
+				<a class="navbar-brand" href="../index.php">IPG Demo Tool</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -44,7 +60,8 @@ class NavBar extends HTMLElement {
 						<li class="nav-item" id="Transactions">
 							<a class="nav-link" href="../Transactions/transactions.php">Transactions</a>
 						</li>
-					</ul>
+					</ul>`
+					+ userElement + `
 				</div>
 			</nav>
 		`;
