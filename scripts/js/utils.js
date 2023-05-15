@@ -66,6 +66,50 @@ function deleteLogConfirmation(payloadFile) {
 
 /**** USERS ****/
 
+// Get user settings from config file
+function getUserConfig(callback) {
+	$.ajax({
+		type: 'POST',
+		url: '../scripts/php/getUserConfigSettings.php',
+		dataType: 'json',
+		success  : function(params) {
+			console.log(JSON.stringify(params[0]));
+			callback(params);
+		}
+	});
+}
+
+// Get user's saved params from config
+function getUserConfigParams() {
+	getUserConfig(function(userConfig) {
+		Object.entries(userConfig["params"]).forEach(param => {
+			const [key, value] = param;
+			var elements = document.querySelectorAll('[id*="'+key+'"]');
+			
+			elements.forEach(element => {
+				element.value = value;
+			});
+		});
+	});
+}
+
+// Save user settings
+function saveUserConfig(formObject) {
+	let data = $(formObject).serializeArray();
+	
+	console.log(data);
+	
+	$.ajax({
+		type: 'POST',
+		url: '../scripts/php/saveUserConfigSettings.php',
+		dataType: 'json',
+		data: $.param(data),
+		success  : function(params) {
+			console.log(JSON.stringify(params));
+		}
+	});
+}
+
 // Log out user by expiring the "user" cookie
 function logOut() {
 	document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";

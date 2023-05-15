@@ -12,6 +12,7 @@ class NavBar extends HTMLElement {
 					<li class="nav-item dropdown" id="User">
 						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">`+user+`</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../User/settings.php">Settings</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="../index.php" onclick="return logOut();">Log out</a>
 						</div>
