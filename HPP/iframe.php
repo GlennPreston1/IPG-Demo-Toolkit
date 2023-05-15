@@ -141,6 +141,7 @@
 		<script>
 			function initSession() {
 				setTimestamp();
+				getUserConfigParams();
 			}
 			
 			$("#tokenForm").on("submit",function(e) {
