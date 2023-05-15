@@ -31,39 +31,39 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId">
 						</div>
 
 						<div class="form-group">
 							<label class="m-0" for="passwordInput">password</label>
-							<input class="form-control form-control-sm" id="passwordInput" name="password" value="u16q9rZ02bW0jqTjxH8t">
+							<input class="form-control form-control-sm" id="passwordInput" name="password">
 						</div>
 
 						<div class="form-group">
 							<label class="m-0" for="allowOriginUrlInput">allowOriginUrl</label>
 							<input class="form-control form-control-sm" id="allowOriginUrlInput" name="allowOriginUrl" value="*">
 						</div>
-
+						
 						<div class="form-group">
-							<label class="m-0" for="currencyInput">currency</label>
-							<input class="form-control form-control-sm" id="currencyInput" name="currency" value="EUR">
+							<label class="m-0" for="timestampInput">timestamp</label>
+							<input class="form-control form-control-sm" id="timestampInput" name="timestamp">
 						</div>
 					</div>
 
 					<div class="col">
 						<div class="form-group">
+							<label class="m-0" for="countryInput">country</label>
+							<input class="form-control form-control-sm" id="countryInput" name="country">
+						</div>
+						
+						<div class="form-group">
+							<label class="m-0" for="currencyInput">currency</label>
+							<input class="form-control form-control-sm" id="currencyInput" name="currency">
+						</div>
+						
+						<div class="form-group">
 							<label class="m-0" for="actionInput">action</label>
 							<input class="form-control form-control-sm" id="actionInput" name="action" value="GET_AVAILABLE_PAYSOLS">
-						</div>
-
-						<div class="form-group">
-							<label class="m-0" for="timestampInput">timestamp</label>
-							<input class="form-control form-control-sm" id="timestampInput" name="timestamp">
-						</div>
-
-						<div class="form-group">
-							<label class="m-0" for="countryInput">country</label>
-							<input class="form-control form-control-sm" id="countryInput" name="country" value="IE">
 						</div>
 					</div>
 				</div>
@@ -86,7 +86,7 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput2">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId">
 						</div>
 					</div>
 

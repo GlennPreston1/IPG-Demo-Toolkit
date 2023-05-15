@@ -31,12 +31,17 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId">
 						</div>
 
 						<div class="form-group">
 							<label class="m-0" for="passwordInput">password</label>
-							<input class="form-control form-control-sm" id="passwordInput" name="password" value="u16q9rZ02bW0jqTjxH8t">
+							<input class="form-control form-control-sm" id="passwordInput" name="password">
+						</div>
+						
+						<div class="form-group">
+							<label class="m-0" for="customerIdInput">customerId</label>
+							<input class="form-control form-control-sm" id="customerIdInput" name="customerId">
 						</div>
 
 						<div class="form-group">
@@ -60,11 +65,6 @@
 						</div>
 						
 						<div class="form-group">
-							<label class="m-0" for="customerIdInput">customerId</label>
-							<input class="form-control form-control-sm" id="customerIdInput" name="customerId">
-						</div>
-						
-						<div class="form-group">
 							<label class="m-0" for="userDeviceInput">userDevice</label>
 							<select class="form-control form-control-sm" id="userDeviceInput" name="userDevice">
 								<option  value="DESKTOP">DESKTOP</option>
@@ -79,6 +79,21 @@
 					</div>
 
 					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="countryInput">country</label>
+							<input class="form-control form-control-sm" id="countryInput" name="country">
+						</div>
+
+						<div class="form-group">
+							<label class="m-0" for="currencyInput">currency</label>
+							<input class="form-control form-control-sm" id="currencyInput" name="currency">
+						</div>
+						
+						<div class="form-group">
+							<label class="m-0" for="specinCreditCardTokenInput">specinCreditCardToken</label>
+							<input class="form-control form-control-sm" id="specinCreditCardTokenInput" name="specinCreditCardToken">
+						</div>
+						
 						<div class="form-group">
 							<label class="m-0" for="actionInput">action</label>
 							<select class="form-control form-control-sm" id="actionInput" name="action">
@@ -100,25 +115,10 @@
 								<option  value="MOTO">MOTO</option>
 							</select>
 						</div>
-
-						<div class="form-group">
-							<label class="m-0" for="countryInput">country</label>
-							<input class="form-control form-control-sm" id="countryInput" name="country" value="IE">
-						</div>
-
-						<div class="form-group">
-							<label class="m-0" for="currencyInput">currency</label>
-							<input class="form-control form-control-sm" id="currencyInput" name="currency" value="EUR">
-						</div>
 						
 						<div class="form-group">
 							<label class="m-0" for="paymentSolutionIdInput">paymentSolutionId</label>
 							<input class="form-control form-control-sm" id="paymentSolutionIdInput" name="paymentSolutionId" value="500">
-						</div>
-						
-						<div class="form-group">
-							<label class="m-0" for="specinCreditCardTokenInput">specinCreditCardToken</label>
-							<input class="form-control form-control-sm" id="specinCreditCardTokenInput" name="specinCreditCardToken">
 						</div>
 						
 						<div class="form-group">
@@ -151,7 +151,7 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput2">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId">
 						</div>
 
 						<div class="form-group">

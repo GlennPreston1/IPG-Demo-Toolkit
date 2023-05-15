@@ -31,12 +31,12 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput1" name="merchantId">
 						</div>
 
 						<div class="form-group">
 							<label class="m-0" for="passwordInput">password</label>
-							<input class="form-control form-control-sm" id="passwordInput" name="password" value="u16q9rZ02bW0jqTjxH8t">
+							<input class="form-control form-control-sm" id="passwordInput" name="password">
 						</div>
 
 						<div class="form-group">
@@ -47,6 +47,11 @@
 
 					<div class="col">
 						<div class="form-group">
+							<label class="m-0" for="originalMerchantTxIdInput">originalMerchantTxId</label>
+							<input class="form-control form-control-sm" id="originalMerchantTxIdInput" name="originalMerchantTxId">
+						</div>
+						
+						<div class="form-group">
 							<label class="m-0" for="actionInput">action</label>
 							<input class="form-control form-control-sm" id="actionInput" name="action" value="VOID">
 						</div>
@@ -54,11 +59,6 @@
 						<div class="form-group">
 							<label class="m-0" for="timestampInput">timestamp</label>
 							<input class="form-control form-control-sm" id="timestampInput" name="timestamp">
-						</div>
-						
-						<div class="form-group">
-							<label class="m-0" for="originalMerchantTxIdInput">originalMerchantTxId</label>
-							<input class="form-control form-control-sm" id="originalMerchantTxIdInput" name="originalMerchantTxId">
 						</div>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput2">merchantId</label>
-							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId" value="800146">
+							<input class="form-control form-control-sm" id="merchantIdInput2" name="merchantId">
 						</div>
 					</div>
 
