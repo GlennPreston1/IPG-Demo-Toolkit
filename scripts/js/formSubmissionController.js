@@ -1,4 +1,4 @@
-var requestController = "../scripts/requestController.php";
+var requestController = "../scripts/php/requestController.php";
 
 var tokenResponseCard = document.querySelector("#tokenResponseCard");
 var actionResponseCard = document.querySelector("#actionResponseCard");

@@ -1,7 +1,7 @@
 <?php
 
 $endpoint = $_POST["endpoint"];
-unset($_POST['endpoint']);
+unset($_POST["endpoint"]);
 
 $curl = curl_init($endpoint);
 

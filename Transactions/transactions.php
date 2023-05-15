@@ -19,7 +19,7 @@
 		<script src="../components/navbar.js" type="text/javascript" defer></script>
 	</head>
 
-	<body>
+	<body onload="initSession()">
 		<navbar-component></navbar-component>
 
 		<div class="container my-4">
@@ -57,32 +57,11 @@
 	</body>
 
 	<script>
-		$(document).ready(function () {
-			$('#transactionsTable').DataTable({
-				order: [[0, 'desc']],
-				columnDefs: [
-					{
-						targets: [2],
-						orderable: false,
-					},
-				],
-			});
-		});
-	</script>
-
-	<script>
-		function deleteLogConfirmation(payloadFile) {
-			let text = "Are you sure you want to delete " + (payloadFile.substring(0, payloadFile.lastIndexOf('.')) || payloadFile) + " log file?";
-
-			if (confirm(text) == true) {
-				console.log(payloadFile);
-
-				$.ajax({
-					type: 'POST',
-					url: 'utils/deletePayloadFile.php',
-					data: { 'file' : '../logs/' + payloadFile }
-				});
-			}
+		function initSession() {
+			formatTransactionsTable();
 		}
 	</script>
+	
+	<!-- JS functions -->
+	<script src="../scripts/js/utils.js" type="text/javascript"></script>
 </html>

@@ -179,6 +179,10 @@
 		</div>
 		
 		<script>
+			function initSession() {
+				setTimestamp();
+			}
+			
 			$("#tokenForm").on("submit",function(e) {
 				e.preventDefault();
 				submitTokenForm(this);
@@ -192,7 +196,7 @@
 		
 		<!-- JS functions -->
 		<script src="../config/endpointConfig.js" type="text/javascript"></script>
-		<script src="../scripts/utils.js" type="text/javascript"></script>
-		<script src="../scripts/formSubmissionController.js" type="text/javascript"></script>
+		<script src="../scripts/js/utils.js" type="text/javascript"></script>
+		<script src="../scripts/js/formSubmissionController.js" type="text/javascript"></script>
 	</body>
 </html>

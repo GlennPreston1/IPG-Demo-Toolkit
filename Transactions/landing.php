@@ -55,4 +55,7 @@
 			</table>
 		</div>
 	</body>
+	
+	<!-- JS functions -->
+	<script src="../scripts/js/utils.js" type="text/javascript"></script>
 </html>
