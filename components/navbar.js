@@ -69,7 +69,11 @@ class NavBar extends HTMLElement {
 		
 		var currentUrl = window.location.pathname;
 
-		if (currentUrl.includes("DirectAPI"))
+		if (currentUrl.includes("HPP"))
+		{
+			document.getElementById("HPP").className += " active";
+		}
+		else if (currentUrl.includes("DirectAPI"))
 		{
 			document.getElementById("DirectAPI").className += " active";
 		}
@@ -77,9 +81,9 @@ class NavBar extends HTMLElement {
 		{
 			document.getElementById("Transactions").className += " active";
 		}
-		else
+		else if (currentUrl.includes("User"))
 		{
-			document.getElementById("HPP").className += " active";
+			document.getElementById("User").className += " active";
 		}
 	}
 }
