@@ -63,3 +63,11 @@ function deleteLogConfirmation(payloadFile) {
 		});
 	}
 }
+
+/**** USERS ****/
+
+// Log out user by expiring the "user" cookie
+function logOut() {
+	document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	return true;
+}
