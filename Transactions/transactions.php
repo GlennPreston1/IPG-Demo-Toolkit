@@ -28,22 +28,34 @@
 			<table id="transactionsTable" class="table table-sm table-striped table-bordered">
 				<thead>
 					<tr>
-						<th scope="col">ID</th>
 						<th scope="col">Timestamp</th>
+						<th scope="col">Merchant ID</th>
+						<th scope="col">MerchantTx ID</th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					$logDir = 'logs/';
+					// Check if user or guest
+					$user = "Guest";
+					if(isset($_COOKIE["user"])) {
+						$user = $_COOKIE["user"];
+					}
+					
+					// Get logs for the user
+					$logDir = 'logs/'.$user;
 					$payloadList = array_diff(scandir($logDir), array('..', '.'));
 					rsort($payloadList);
-
+					
+					// Put previous transactions in a table
 					foreach($payloadList as $key => $value)
 					{
+						$filenameSplit = explode('_', pathinfo($value)['filename'], 3);
+						
 						echo '<tr>';
-						echo '<td>'.pathinfo($value)['filename'].'</td>';
-						echo '<td>'.date('Y-m-d H:i:s', explode('_', pathinfo($value)['filename'])[1]).'</td>';
+						echo '<td>'.date('Y-m-d H:i:s', $filenameSplit[0]).'</td>';
+						echo '<td>'.$filenameSplit[1].'</td>';
+						echo '<td>'.$filenameSplit[2].'</td>';
 						echo '<td>
 						<a href="selectedTransaction.php?id='.$value.'">view</a>
 						 | 

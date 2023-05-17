@@ -16,17 +16,12 @@
 
 		<div class="container my-4">
 			<div id="pageHeading" class="text text-center mb-4">
-				<h2><strong>
-					<?php		
-					// Get payload filename
-					echo pathinfo($_GET['id'])['filename'];
-					?>
-					</strong></h2>
+				<h2><strong>Transaction Result Call</strong></h2>
 				
 				<p>
 					<?php		
 					// Get payload date/time
-					echo date('Y-m-d H:i:s', explode('_', pathinfo($_GET['id'])['filename'])[1])
+					echo date('Y-m-d H:i:s', explode('_', pathinfo($_GET['id'])['filename'])[0])
 					?>
 				</p>
 			</div>
@@ -40,8 +35,14 @@
 				</thead>
 				<tbody>
 					<?php
+					// Check if user or guest
+					$user = "Guest";
+					if(isset($_COOKIE["user"])) {
+						$user = $_COOKIE["user"];
+					}
+					
 					// Get contents from specified payload file
-					$payload_file = file_get_contents('logs/'.$_GET['id']) or die("Unable to open file!");
+					$payload_file = file_get_contents('logs/'.$user.'/'.$_GET['id']) or die("Unable to open file!");
 					$parameters = explode("&", urldecode($payload_file));
 					asort($parameters);
 
