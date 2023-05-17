@@ -52,11 +52,16 @@ function deleteLogConfirmation(payloadFile) {
 
 	if (confirm(text) == true) {
 		console.log(payloadFile);
+		
+		var user = getCookie("user");
+		if (user == null || user == "") {
+			user = "Guest";
+		}
 
 		$.ajax({
 			type: 'POST',
 			url: '../scripts/php/deletePayloadFile.php',
-			data: { 'file' : '../../Transactions/logs/' + payloadFile },
+			data: { 'file' : '../../Transactions/logs/' + user + "/" + payloadFile },
 			success  : function(result) {
 				location.reload();
 			}
