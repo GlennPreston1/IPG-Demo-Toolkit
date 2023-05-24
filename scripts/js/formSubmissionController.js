@@ -43,6 +43,11 @@ function submitActionForm(formObject) {
 		data: $.param(data),
 		success  : function(result) {
 			console.log(JSON.stringify(result));
+			
+			if (window.location.pathname.includes("tokenize")) {
+				showTokenizeParamsTxt(result["result"]);
+			}
+			
 			actionResponseCard.innerHTML = JSON.stringify(result);
 			actionResponseCard.scrollIntoView();
 		}

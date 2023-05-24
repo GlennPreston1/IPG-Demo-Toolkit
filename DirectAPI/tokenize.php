@@ -114,7 +114,18 @@
 
 			<h4>Action Response</h4>
 			<div class="card bg-light text-dark mb-4">
-				<div class="card-body" id="actionResponseCard" ></div>
+				<div class="card-body" id="actionResponseCard"></div>
+			</div>
+			
+			<div class="row my-4" id="passTokenizeParamsContainer" hidden>
+				<div class="col">
+					<div class="row justify-content-center">
+						<p id="passTokenizeParamsTxt">Click below to use this card token in an Auth | Purchase | Verify request</p>
+					</div>
+					<div class="row justify-content-center">
+						<button class="btn btn-primary btn-lg" onclick="passTokenizedParams()">Auth | Purchase | Verify</button>
+					</div>
+				</div>
 			</div>
 		</div>
 

@@ -31,6 +31,33 @@ function getCookie(cookieName) {
 		?.split("=")[1];
 }
 
+// Show showTokenizeParamsTxt
+function showTokenizeParamsTxt(result) {
+	var passTokenizeParamsContainer = document.querySelector("#passTokenizeParamsContainer");
+	
+	if(result == "success") {
+		passTokenizeParamsContainer.removeAttribute("hidden");
+	}
+}
+			
+// Send specinCreditCardToken and customerId to Auth/Purchase/Verify
+function passTokenizedParams() {
+	var actionResponse = JSON.parse(document.querySelector("#actionResponseCard").innerHTML);
+	window.location.href = "./auth_purchase_verify.php?customerId="+actionResponse["customerId"]+"&cardToken="+actionResponse["cardToken"];
+}
+
+// Set specinCreditCardToken and customerId if they were passed from Tokenize response
+function setTokenizedParams() {
+	var params = new Map(location.search.slice(1).split('&').map(kv => kv.split('=')));
+	
+	if (params.has("customerId") && params.has("cardToken")) {
+		document.querySelector("#customerIdInput").value = params.get("customerId");
+		document.querySelector("#customerIdInput").style.color = "green";
+		document.querySelector("#specinCreditCardTokenInput").value = params.get("cardToken");
+		document.querySelector("#specinCreditCardTokenInput").style.color = "green";
+	}
+}
+
 /**** TRANSACTIONS ****/
 
 // Format transactions table with DataTable
@@ -78,7 +105,6 @@ function getUserConfig(callback) {
 		url: '../scripts/php/getUserConfigSettings.php',
 		dataType: 'json',
 		success  : function(params) {
-			console.log(JSON.stringify(params[0]));
 			callback(params);
 		}
 	});

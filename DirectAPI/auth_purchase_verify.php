@@ -182,6 +182,7 @@
 			function initSession() {
 				setTimestamp();
 				getUserConfigParams();
+				setTokenizedParams();
 			}
 			
 			$("#tokenForm").on("submit",function(e) {
