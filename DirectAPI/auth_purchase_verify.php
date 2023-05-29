@@ -176,6 +176,17 @@
 			<div class="card bg-light text-dark mb-4">
 				<div class="card-body" id="actionResponseCard" ></div>
 			</div>
+			
+			<div class="row my-4" id="redirectionUrlContainer" hidden>
+				<div class="col">
+					<div class="row justify-content-center">
+						<p id="redirectionUrlTxt">Click the below link to complete the payment:</p>
+					</div>
+					<div class="row justify-content-center">
+						<a id="redirectionUrlLink" href=""></a>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<script>

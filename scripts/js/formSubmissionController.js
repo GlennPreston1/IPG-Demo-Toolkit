@@ -44,8 +44,12 @@ function submitActionForm(formObject) {
 		success  : function(result) {
 			console.log(JSON.stringify(result));
 			
-			if (window.location.pathname.includes("tokenize")) {
+			if (window.location.pathname.includes("DirectAPI/tokenize")) {
 				showTokenizeParamsTxt(result["result"]);
+			}
+			
+			if (window.location.pathname.includes("DirectAPI/auth_purchase_verify")) {
+				showRedirectionUrl(result);
 			}
 			
 			actionResponseCard.innerHTML = JSON.stringify(result);

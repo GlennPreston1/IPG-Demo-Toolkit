@@ -33,10 +33,8 @@ function getCookie(cookieName) {
 
 // Show showTokenizeParamsTxt
 function showTokenizeParamsTxt(result) {
-	var passTokenizeParamsContainer = document.querySelector("#passTokenizeParamsContainer");
-	
 	if(result == "success") {
-		passTokenizeParamsContainer.removeAttribute("hidden");
+		document.querySelector("#passTokenizeParamsContainer").removeAttribute("hidden");
 	}
 }
 			
@@ -55,6 +53,15 @@ function setTokenizedParams() {
 		document.querySelector("#customerIdInput").style.color = "green";
 		document.querySelector("#specinCreditCardTokenInput").value = params.get("cardToken");
 		document.querySelector("#specinCreditCardTokenInput").style.color = "green";
+	}
+}
+
+// Show redirectionUrl as link
+function showRedirectionUrl(result) {
+	if(result["result"] == "redirection") {
+		document.querySelector("#redirectionUrlLink").href = result["redirectionUrl"];
+		document.querySelector("#redirectionUrlLink").innerHTML = result["redirectionUrl"];
+		document.querySelector("#redirectionUrlContainer").removeAttribute("hidden");
 	}
 }
 
