@@ -6,8 +6,10 @@ class EnvironmentSelector extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
 			<div class="row justify-content-center mb-4">
-				<div class="form-group">
-					<label for="environmentInput">Select environment:</label>
+				<div class="form-inline">
+					<div class="form-check-inline">
+						<label for="environmentInput">Select environment:</label>
+					</div>
 					<select class="form-control" id="environmentInput" onchange="setEnvironment(this.value)">
 						<option  value="BOIPA UAT">BOIPA UAT</option>
 						<option  value="BOIPA PROD">BOIPA PROD</option>
