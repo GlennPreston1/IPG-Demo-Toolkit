@@ -2,6 +2,7 @@
 
 $endpoint = $_POST["endpoint"];
 unset($_POST["endpoint"]);
+unset($_POST["cofOption"]);
 
 $curl = curl_init($endpoint);
 
