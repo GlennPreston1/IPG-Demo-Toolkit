@@ -215,19 +215,6 @@
 				e.preventDefault();
 				submitTokenForm(this);
 			});
-
-			function ToggleFieldDisabledStatus(fieldName, diasbledStatus) {
-				document.getElementsByName(fieldName).forEach((e) => {
-					e.disabled = diasbledStatus;
-				});
-			}
-
-			var cofNotIncluded = {};
-			var cofInitial = {
-				"cardOnFileType": "First",
-				"cardOnFileInitiator": "Cardholder",
-				"cardOnFileReason": "C"
-			};
 		</script>
 		
 		<!-- JS functions -->
