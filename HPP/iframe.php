@@ -15,6 +15,7 @@
 		<!-- Components -->
 		<script src="../components/navbar.js" type="text/javascript" defer></script>
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
+		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 
 		<!-- Iframe -->
 		<script src="https://cashierui-apiuat.test.boipapaymentgateway.com/js/api.js"></script>
@@ -97,9 +98,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<button class="btn btn-primary btn-lg my-4" type="submit">Submit</button>
-				</div>
+				
+				<submitbutton-component></submitbutton-component>
 			</form>
 
 			<h4>Token Response</h4>
@@ -127,9 +127,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<button class="btn btn-primary btn-lg my-4" onclick="pay()">Submit</button>
-				</div>
+				
+				<submitbutton-component></submitbutton-component>
 			</form>
 
 			<h4>Iframe</h4>
@@ -151,6 +150,7 @@
 			
 			$("#actionForm").on("submit",function(e) {
 				e.preventDefault();
+				pay();
 			});
 		</script>
 		
