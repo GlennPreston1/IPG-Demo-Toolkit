@@ -15,6 +15,7 @@
 		<!-- Components -->
 		<script src="../components/navbar.js" type="text/javascript" defer></script>
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
+		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 	</head>
 
@@ -26,8 +27,7 @@
 
 			<environmentselector-component></environmentselector-component>
 
-			<hr style="height:2px; border-width:0; color:gray; background-color:lightgray" />
-			<br />
+			<divider-component></divider-component>
 
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
@@ -157,9 +157,7 @@
 				<div class="card-body" id="tokenResponseCard" ></div>
 			</div>
 
-			<br />
-			<hr style="height:2px; border-width:0; color:gray; background-color:lightgray" />
-			<br />
+			<divider-component></divider-component>
 
 			<h2 class="my-4">Step 2: Action Request</h2>
 			<form id="actionForm">

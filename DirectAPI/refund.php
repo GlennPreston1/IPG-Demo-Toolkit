@@ -15,6 +15,7 @@
 		<!-- Components -->
 		<script src="../components/navbar.js" type="text/javascript" defer></script>
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
+		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 	</head>
 
@@ -25,6 +26,8 @@
 			<div class="text text-center mb-4"><h2><strong>Direct API - Refund</strong></h2></div>
 
 			<environmentselector-component></environmentselector-component>
+
+			<divider-component></divider-component>
 
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
@@ -77,7 +80,7 @@
 				<div class="card-body" id="tokenResponseCard" ></div>
 			</div>
 
-			<br />
+			<divider-component></divider-component>
 
 			<h2 class="my-4">Step 2: Action Request</h2>
 
