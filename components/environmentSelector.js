@@ -5,7 +5,7 @@ class EnvironmentSelector extends HTMLElement {
 
 	connectedCallback() {
 		this.innerHTML = `
-			<div class="row justify-content-center mb-4">
+			<div class="row justify-content-center">
 				<div class="form-inline">
 					<div class="form-check-inline">
 						<label for="environmentInput">Select environment:</label>
