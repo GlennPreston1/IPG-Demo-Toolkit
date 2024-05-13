@@ -17,6 +17,7 @@
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
 		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
+		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 
 		<!-- Iframe -->
 		<script src="https://cashierui-apiuat.test.boipapaymentgateway.com/js/api.js"></script>
@@ -34,7 +35,8 @@
 
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
-				<div class="row">
+				<div class="text text-center mb-3"><h6><strong>Required Parameters</strong></h6></div>
+				<div class="row mb-3">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
@@ -102,6 +104,36 @@
 					</div>
 				</div>
 				
+				<cofoption-component></cofoption-component>
+
+				<div class="row mb-3 cofParam">
+					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileTypeInput">cardOnFileType</label>
+							<select class="form-control form-control-sm cofParam" id="cardOnFileTypeInput" name="cardOnFileType">
+								<option  value="First">First</option>
+								<option  value="Repeat">Repeat</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col">
+					<div class="form-group">
+							<label class="m-0" for="cardOnFileReasonInput">cardOnFileReason</label>
+							<select class="form-control form-control-sm cofParam" id="cardOnFileReasonInput" name="cardOnFileReason">
+								<option  value="C">C</option>
+								<option  value="I">I</option>
+								<option  value="R">R</option>
+								<option  value="H">H</option>
+								<option  value="E">E</option>
+								<option  value="D">D</option>
+								<option  value="M">M</option>
+								<option  value="N">N</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
 				<submitbutton-component></submitbutton-component>
 			</form>
 
@@ -144,6 +176,7 @@
 			function initSession() {
 				setTimestamp();
 				getUserConfigParams();
+				COFParams("Not Included");
 			}
 			
 			$("#tokenForm").on("submit",function(e) {

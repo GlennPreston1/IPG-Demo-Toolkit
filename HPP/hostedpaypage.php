@@ -17,6 +17,7 @@
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
 		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
+		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 	</head>
 
 	<body onload="initSession()">
@@ -32,7 +33,7 @@
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
 				<div class="text text-center mb-3"><h6><strong>Required Parameters</strong></h6></div>
-				<div class="row">
+				<div class="row mb-3">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
@@ -100,28 +101,9 @@
 					</div>
 				</div>
 
-				<div class="row justify-content-center mb-4">
-					<div class="form-check-inline">
-						<h6 class="mb-0"><strong>Card On File Parameters:</strong></h6>
-					</div>
-					<div class="form-check-inline">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="cofOption" onclick="COFParams(this.value)" value="Not Included" checked="checked">Not Included
-						</label>
-					</div>
-					<div class="form-check-inline">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="cofOption" onclick="COFParams(this.value)" value="Initial">Initial
-						</label>
-					</div>
-					<div class="form-check-inline">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="cofOption" onclick="COFParams(this.value)" value="Subsequent" disabled>Subsequent
-						</label>
-					</div>
-				</div>
+				<cofoption-component></cofoption-component>
 
-				<div class="row cofParam">
+				<div class="row mb-3 cofParam">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="cardOnFileTypeInput">cardOnFileType</label>
@@ -191,22 +173,6 @@
 				setTimestamp();
 				getUserConfigParams();
 				COFParams("Not Included");
-			}
-
-			function COFParams(value) {
-				console.log(value);
-				if (value == "Not Included") {
-					document.querySelectorAll(".cofParam").forEach(element => {
-						element.disabled = true;
-						element.style.display = "none";
-					});
-				}
-				else {
-					document.querySelectorAll(".cofParam").forEach(element => {
-						element.disabled = false;
-						element.style.display = "flex";
-					});
-				}
 			}
 			
 			$("#tokenForm").on("submit",function(e) {

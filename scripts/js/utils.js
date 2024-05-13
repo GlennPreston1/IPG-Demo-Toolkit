@@ -65,6 +65,23 @@ function showRedirectionUrl(result) {
 	}
 }
 
+// Option to send Card On File parameters
+function COFParams(value) {
+	console.log(value);
+	if (value == "Not Included") {
+		document.querySelectorAll(".cofParam").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+	}
+	else {
+		document.querySelectorAll(".cofParam").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+	}
+}
+
 /**** TRANSACTIONS ****/
 
 // Format transactions table with DataTable
