@@ -19,6 +19,7 @@
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 		<script src="../components/sessionTokenResponseCard.js" type="text/javascript" defer></script>
 		<script src="../components/actionResponseCard.js" type="text/javascript" defer></script>
+		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 	</head>
 
 	<body onload="initSession()">
@@ -33,7 +34,8 @@
 
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
-				<div class="row">
+				<div class="text text-center mb-3"><h6><strong>Required Parameters</strong></h6></div>
+				<div class="row mb-3">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>
@@ -138,6 +140,71 @@
 						</div>
 					</div>
 				</div>
+
+				<cofoption-component></cofoption-component>
+
+				<div class="row mb-3 cofInitial">
+					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileTypeInput1">cardOnFileType</label>
+							<input class="form-control form-control-sm cofInitial" id="cardOnFileTypeInput1" name="cardOnFileType" value="First">
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileReasonInput1">cardOnFileReason</label>
+							<select class="form-control form-control-sm cofInitial" id="cardOnFileReasonInput1" name="cardOnFileReason">
+								<option  value="C">C</option>
+								<option  value="I">I</option>
+								<option  value="R">R</option>
+								<option  value="H">H</option>
+								<option  value="E">E</option>
+								<option  value="D">D</option>
+								<option  value="M">M</option>
+								<option  value="N">N</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-3 cofSubsequent">
+					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileTypeInput2">cardOnFileType</label>
+							<input class="form-control form-control-sm cofSubsequent" id="cardOnFileTypeInput2" name="cardOnFileType" value="Repeat">
+						</div>
+
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileInitiatorInput">cardOnFileInitiator</label>
+							<select class="form-control form-control-sm cofSubsequent" id="cardOnFileInitiatorInput" name="cardOnFileInitiator">
+								<option  value="Cardholder">Cardholder</option>
+								<option  value="Merchant">Merchant</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileReasonInput2">cardOnFileReason</label>
+							<select class="form-control form-control-sm cofSubsequent" id="cardOnFileReasonInput2" name="cardOnFileReason">
+								<option  value="C">C</option>
+								<option  value="I">I</option>
+								<option  value="R">R</option>
+								<option  value="H">H</option>
+								<option  value="E">E</option>
+								<option  value="D">D</option>
+								<option  value="M">M</option>
+								<option  value="N">N</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label class="m-0" for="cardOnFileInitialTransactionIdInput">cardOnFileInitialTransactionId</label>
+							<input class="form-control form-control-sm cofSubsequent" id="cardOnFileInitialTransactionIdInput" name="cardOnFileInitialTransactionId">
+						</div>
+					</div>
+				</div>
 				
 				<submitbutton-component></submitbutton-component>
 			</form>
@@ -191,6 +258,7 @@
 			function initSession() {
 				setTimestamp();
 				getUserConfigParams();
+				COFParams("Not Included");
 				setTokenizedParams();
 			}
 			

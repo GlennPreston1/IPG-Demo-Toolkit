@@ -4,6 +4,19 @@ class CofOption extends HTMLElement {
 	}
 
 	connectedCallback() {
+        var currentUrl = window.location.pathname;
+        var subsequentOptionElement = "";
+
+        if (currentUrl.includes("DirectAPI")) {
+			subsequentOptionElement = `
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="cofOption" onclick="COFParams(this.value)" value="Subsequent">Subsequent
+                    </label>
+                </div>
+			`;
+		}
+
 		this.innerHTML = `
         <div class="row justify-content-center mb-3">
             <div class="form-check-inline">
@@ -18,7 +31,8 @@ class CofOption extends HTMLElement {
                 <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="cofOption" onclick="COFParams(this.value)" value="Initial">Initial
                 </label>
-            </div>
+            </div>`
+            + subsequentOptionElement + `
         </div>
 		`;
 	}	

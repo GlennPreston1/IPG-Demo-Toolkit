@@ -69,15 +69,50 @@ function showRedirectionUrl(result) {
 function COFParams(value) {
 	console.log(value);
 	if (value == "Not Included") {
-		document.querySelectorAll(".cofParam").forEach(element => {
+		document.querySelectorAll(".cofInitial").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+		document.querySelectorAll(".cofSubsequent").forEach(element => {
 			element.disabled = true;
 			element.style.display = "none";
 		});
 	}
 	else {
-		document.querySelectorAll(".cofParam").forEach(element => {
+		document.querySelectorAll(".cofInitial").forEach(element => {
 			element.disabled = false;
 			element.style.display = "flex";
+		});
+	}
+
+	if (value == "Initial") {
+		document.querySelectorAll(".cofInitial").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+		document.querySelectorAll(".cofSubsequent").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+	}
+	else if (value == "Subsequent") {
+		document.querySelectorAll(".cofSubsequent").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+		document.querySelectorAll(".cofInitial").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+	}
+	else {
+		document.querySelectorAll(".cofInitial").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+		document.querySelectorAll(".cofSubsequent").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
 		});
 	}
 }

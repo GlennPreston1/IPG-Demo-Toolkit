@@ -107,11 +107,11 @@
 				
 				<cofoption-component></cofoption-component>
 
-				<div class="row mb-3 cofParam">
+				<div class="row mb-3 cofInitial">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="cardOnFileTypeInput">cardOnFileType</label>
-							<select class="form-control form-control-sm cofParam" id="cardOnFileTypeInput" name="cardOnFileType">
+							<select class="form-control form-control-sm cofInitial" id="cardOnFileTypeInput" name="cardOnFileType">
 								<option  value="First">First</option>
 								<option  value="Repeat">Repeat</option>
 							</select>
@@ -119,9 +119,9 @@
 					</div>
 
 					<div class="col">
-					<div class="form-group">
+						<div class="form-group">
 							<label class="m-0" for="cardOnFileReasonInput">cardOnFileReason</label>
-							<select class="form-control form-control-sm cofParam" id="cardOnFileReasonInput" name="cardOnFileReason">
+							<select class="form-control form-control-sm cofInitial" id="cardOnFileReasonInput" name="cardOnFileReason">
 								<option  value="C">C</option>
 								<option  value="I">I</option>
 								<option  value="R">R</option>
