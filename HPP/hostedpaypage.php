@@ -152,9 +152,9 @@
 				<submitbutton-component></submitbutton-component>
 			</form>
 
-			<h4>Token Response</h4>
+			<h4>Session Token Response</h4>
 			<div class="card bg-light text-dark mb-4">
-				<div class="card-body" id="tokenResponseCard" ></div>
+				<div class="card-body" id="sessionTokenResponseCard" ></div>
 			</div>
 
 			<divider-component></divider-component>

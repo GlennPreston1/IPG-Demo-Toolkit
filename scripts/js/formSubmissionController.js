@@ -1,6 +1,6 @@
 var requestController = "../scripts/php/requestController.php";
 
-var tokenResponseCard = document.querySelector("#tokenResponseCard");
+var sessionTokenResponseCard = document.querySelector("#sessionTokenResponseCard");
 var actionResponseCard = document.querySelector("#actionResponseCard");
 var tokenInput = document.querySelector("#tokenInput");
 var merchantIdInput2 = document.querySelector("#merchantIdInput2");
@@ -16,8 +16,8 @@ function submitTokenForm(formObject) {
 		data: $.param(data),
 		success  : function(result) {
 			console.log(JSON.stringify(result));
-			tokenResponseCard.innerHTML = JSON.stringify(result);
-			tokenResponseCard.scrollIntoView();
+			sessionTokenResponseCard.innerHTML = JSON.stringify(result);
+			sessionTokenResponseCard.scrollIntoView();
 			if (result.token != null) {
 				tokenInput.value = result.token;
 			}
