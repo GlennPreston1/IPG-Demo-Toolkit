@@ -18,6 +18,7 @@
 		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 		<script src="../components/sessionTokenResponseCard.js" type="text/javascript" defer></script>
+		<script src="../components/actionResponseCard.js" type="text/javascript" defer></script>
 	</head>
 
 	<body onload="initSession()">
@@ -172,10 +173,7 @@
 				<submitbutton-component></submitbutton-component>
 			</form>
 			
-			<h4>Action Response</h4>
-			<div class="card bg-light text-dark mb-4">
-				<div class="card-body" id="actionResponseCard" ></div>
-			</div>
+			<actionresponsecard-component></actionresponsecard-component>
 			
 			<div class="row my-4" id="redirectionUrlContainer" hidden>
 				<div class="col">
