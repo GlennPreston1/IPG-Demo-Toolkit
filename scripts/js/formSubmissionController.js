@@ -1,13 +1,12 @@
 var requestController = "../scripts/php/requestController.php";
 
-var sessionTokenResponseCard = document.querySelector("#sessionTokenResponseCard");
-var actionResponseCard = document.querySelector("#actionResponseCard");
-var tokenInput = document.querySelector("#tokenInput");
-var merchantIdInput2 = document.querySelector("#merchantIdInput2");
-
 function submitTokenForm(formObject) {
 	let data = $(formObject).serializeArray();
 	data.push({name: "endpoint", value: $(formObject).attr('action')});
+
+	var sessionTokenResponseCard = document.querySelector("#sessionTokenResponseCard");
+	var tokenInput = document.querySelector("#tokenInput");
+	var merchantIdInput2 = document.querySelector("#merchantIdInput2");
 
 	$.ajax({
 		url: requestController,
@@ -35,6 +34,8 @@ function submitTokenForm(formObject) {
 function submitActionForm(formObject) {
 	let data = $(formObject).serializeArray();
 	data.push({name: "endpoint", value: $(formObject).attr('action')});
+
+	var actionResponseCard = document.querySelector("#actionResponseCard");
 
 	$.ajax({
 		url: requestController,

@@ -17,6 +17,7 @@
 		<script src="../components/environmentSelector.js" type="text/javascript" defer></script>
 		<script src="../components/divider.js" type="text/javascript" defer></script>
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
+		<script src="../components/sessionTokenResponseCard.js" type="text/javascript" defer></script>
 		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 
 		<!-- Iframe -->
@@ -137,10 +138,7 @@
 				<submitbutton-component></submitbutton-component>
 			</form>
 
-			<h4>Token Response</h4>
-			<div class="card bg-light text-dark mb-4">
-				<div class="card-body" id="sessionTokenResponseCard" ></div>
-			</div>
+			<sessiontokenresponsecard-component></sessiontokenresponsecard-component>
 
 			<divider-component></divider-component>
 
