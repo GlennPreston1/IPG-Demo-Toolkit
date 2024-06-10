@@ -19,6 +19,7 @@
 		<script src="../components/submitButton.js" type="text/javascript" defer></script>
 		<script src="../components/sessionTokenResponseCard.js" type="text/javascript" defer></script>
 		<script src="../components/cofOption.js" type="text/javascript" defer></script>
+		<script src="../components/cofInitial.js" type="text/javascript" defer></script>
 
 		<!-- Iframe -->
 		<script src="https://cashierui-apiuat.test.boipapaymentgateway.com/js/api.js"></script>
@@ -107,33 +108,7 @@
 				
 				<cofoption-component></cofoption-component>
 
-				<div class="row mb-3 cofInitial">
-					<div class="col">
-						<div class="form-group">
-							<label class="m-0" for="cardOnFileTypeInput">cardOnFileType</label>
-							<select class="form-control form-control-sm cofInitial" id="cardOnFileTypeInput" name="cardOnFileType">
-								<option  value="First">First</option>
-								<option  value="Repeat">Repeat</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="col">
-						<div class="form-group">
-							<label class="m-0" for="cardOnFileReasonInput">cardOnFileReason</label>
-							<select class="form-control form-control-sm cofInitial" id="cardOnFileReasonInput" name="cardOnFileReason">
-								<option  value="C">C</option>
-								<option  value="I">I</option>
-								<option  value="R">R</option>
-								<option  value="H">H</option>
-								<option  value="E">E</option>
-								<option  value="D">D</option>
-								<option  value="M">M</option>
-								<option  value="N">N</option>
-							</select>
-						</div>
-					</div>
-				</div>
+				<cofinitial-component></cofinitial-component>
 
 				<submitbutton-component></submitbutton-component>
 			</form>
