@@ -18,7 +18,7 @@ class CofOption extends HTMLElement {
 		}
 
 		this.innerHTML = `
-        <div class="row justify-content-center mb-3">
+        <div class="row justify-content-center my-3">
             <div class="form-check-inline">
                 <h6 class="mb-0"><strong>Card On File Parameters:</strong></h6>
             </div>

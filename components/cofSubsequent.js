@@ -5,7 +5,7 @@ class CofSubsequent extends HTMLElement {
 
 	connectedCallback() {
 		this.innerHTML = `
-        <div class="row mb-3 cofSubsequent">
+        <div class="row cofSubsequent">
             <div class="col">
                 <div class="form-group">
                     <label class="m-0" for="cardOnFileTypeInput2">cardOnFileType</label>

@@ -34,8 +34,8 @@
 
 			<h2 class="mb-4">Step 1: Session Token Request</h2>
 			<form id="tokenForm">
-				<div class="text text-center mb-3"><h6><strong>Required Parameters</strong></h6></div>
-				<div class="row mb-3">
+				<div class="text text-center my-3"><h6><strong>Required Parameters</strong></h6></div>
+				<div class="row">
 					<div class="col">
 						<div class="form-group">
 							<label class="m-0" for="merchantIdInput1">merchantId</label>

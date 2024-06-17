@@ -5,7 +5,7 @@ class CofInitial extends HTMLElement {
 
 	connectedCallback() {
 		this.innerHTML = `
-        <div class="row mb-3 cofInitial">
+        <div class="row cofInitial">
             <div class="col">
                 <div class="form-group">
                     <label class="m-0" for="cardOnFileTypeInput1">cardOnFileType</label>
