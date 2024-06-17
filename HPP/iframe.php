@@ -20,6 +20,7 @@
 		<script src="../components/sessionTokenResponseCard.js" type="text/javascript" defer></script>
 		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 		<script src="../components/cofInitial.js" type="text/javascript" defer></script>
+		<script src="../components/mmrp.js" type="text/javascript" defer></script>
 
 		<!-- Iframe -->
 		<script src="https://cashierui-apiuat.test.boipapaymentgateway.com/js/api.js"></script>
@@ -110,6 +111,8 @@
 
 				<cofinitial-component></cofinitial-component>
 
+				<mmrp-component></mmrp-component>
+
 				<submitbutton-component></submitbutton-component>
 			</form>
 
@@ -147,6 +150,7 @@
 		
 		<script>
 			function initSession() {
+				setListeners();
 				setTimestamp();
 				getUserConfigParams();
 				COFParams("Not Included");

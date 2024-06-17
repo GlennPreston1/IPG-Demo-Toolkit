@@ -22,6 +22,7 @@
 		<script src="../components/cofOption.js" type="text/javascript" defer></script>
 		<script src="../components/cofInitial.js" type="text/javascript" defer></script>
 		<script src="../components/cofSubsequent.js" type="text/javascript" defer></script>
+		<script src="../components/mmrp.js" type="text/javascript" defer></script>
 	</head>
 
 	<body onload="initSession()">
@@ -148,6 +149,8 @@
 				<cofinitial-component></cofinitial-component>
 
 				<cofsubsequent-component></cofsubsequent-component>
+
+				<mmrp-component></mmrp-component>
 				
 				<submitbutton-component></submitbutton-component>
 			</form>
@@ -199,6 +202,7 @@
 		
 		<script>
 			function initSession() {
+				setListeners();
 				setTimestamp();
 				getUserConfigParams();
 				COFParams("Not Included");

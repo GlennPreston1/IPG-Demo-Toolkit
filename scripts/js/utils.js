@@ -1,5 +1,12 @@
 /**** HPP/DIRECT API ****/
 
+// Set event listeners
+function setListeners() {
+	console.log("Set listeners");
+	$("#cardOnFileReasonInput1").on("change",function(e) { cardOnFileReasonListener(e.currentTarget.value); });
+	$("#cardOnFileReasonInput2").on("change",function(e) { cardOnFileReasonListener(e.currentTarget.value); });
+}
+
 // Set timestamp parameter
 function setTimestamp() {
 	var timestampInput = document.querySelector("#timestampInput");
@@ -67,43 +74,29 @@ function showRedirectionUrl(result) {
 
 // Option to send Card On File parameters
 function COFParams(value) {
-	console.log(value);
-	if (value == "Not Included") {
-		document.querySelectorAll(".cofInitial").forEach(element => {
-			element.disabled = true;
-			element.style.display = "none";
-		});
-		document.querySelectorAll(".cofSubsequent").forEach(element => {
-			element.disabled = true;
-			element.style.display = "none";
-		});
-	}
-	else {
-		document.querySelectorAll(".cofInitial").forEach(element => {
-			element.disabled = false;
-			element.style.display = "flex";
-		});
-	}
-
 	if (value == "Initial") {
-		document.querySelectorAll(".cofInitial").forEach(element => {
-			element.disabled = false;
-			element.style.display = "flex";
-		});
 		document.querySelectorAll(".cofSubsequent").forEach(element => {
 			element.disabled = true;
 			element.style.display = "none";
 		});
+		document.querySelectorAll(".cofInitial").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+		cofReason = document.querySelector("#cardOnFileReasonInput1");
+		cardOnFileReasonListener(cofReason.options[cofReason.selectedIndex].value);
 	}
 	else if (value == "Subsequent") {
-		document.querySelectorAll(".cofSubsequent").forEach(element => {
-			element.disabled = false;
-			element.style.display = "flex";
-		});
 		document.querySelectorAll(".cofInitial").forEach(element => {
 			element.disabled = true;
 			element.style.display = "none";
 		});
+		document.querySelectorAll(".cofSubsequent").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+		cofReason = document.querySelector("#cardOnFileReasonInput2");
+		cardOnFileReasonListener(cofReason.options[cofReason.selectedIndex].value);
 	}
 	else {
 		document.querySelectorAll(".cofInitial").forEach(element => {
@@ -111,6 +104,23 @@ function COFParams(value) {
 			element.style.display = "none";
 		});
 		document.querySelectorAll(".cofSubsequent").forEach(element => {
+			element.disabled = true;
+			element.style.display = "none";
+		});
+		cardOnFileReasonListener();
+	}
+}
+
+function cardOnFileReasonListener(value) {
+	if (value == 'I' || value == 'R')
+	{
+		document.querySelectorAll(".mmrp").forEach(element => {
+			element.disabled = false;
+			element.style.display = "flex";
+		});
+	}
+	else {
+		document.querySelectorAll(".mmrp").forEach(element => {
 			element.disabled = true;
 			element.style.display = "none";
 		});
