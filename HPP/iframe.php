@@ -26,7 +26,7 @@
 		<script src="https://cashierui-apiuat.test.boipapaymentgateway.com/js/api.js"></script>
 	</head>
 
-	<body onload="initSession()">
+	<body onload="initSession()" style="overflow:auto;">
 		<navbar-component></navbar-component>
 
 		<div class="container my-4">
@@ -180,7 +180,8 @@
 			function init() {
 				console.log(document.querySelector("#actionForm").action);
 				cashier.init ({ 
-					baseUrl: document.querySelector("#actionForm").action
+					baseUrl: document.querySelector("#actionForm").action,
+					changeCallback: iframeChangeCallback
 				});
 			}
 
@@ -194,10 +195,18 @@
 					merchantId: merchantId,
 					token:token
 				});
-				
-				iframeCard.style.height = "600px";
-				iframeCard.scrollIntoView();
 			};
+
+			function iframeChangeCallback(event, data)
+			{
+				if (data.height)
+				{
+					console.log("iframeChangeCallback height: " + data.height);
+					var iframeHeight = data.height + 50;
+					iframeCard.style.height = iframeHeight + "px";
+					iframeCard.scrollIntoView();
+				}
+			}
 		</script>
 	</body>
 </html>
